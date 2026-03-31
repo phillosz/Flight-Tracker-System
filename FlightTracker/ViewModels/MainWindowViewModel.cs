@@ -1,18 +1,35 @@
 ﻿using FlightTracker.Interfaces;
 using FlightTracker.Models;
-using System;
-using System.Threading.Tasks;
 
 namespace FlightTracker.ViewModels;
 
-public partial class MainWindowViewModel(ILoadDataService _loadDataService): ViewModelBase
+public partial class MainWindowViewModel(ILoadDataService _loadDataService, IAnalyticsService _analyticsService): ViewModelBase
 {
     private readonly ILoadDataService _loadDataService = _loadDataService;
+    private readonly IAnalyticsService _analyticsService = _analyticsService;
 
     private FlightDataRoot _flightData = new FlightDataRoot();
     public FlightDataRoot FlightData
     {
         get => _flightData;
-        set => SetProperty(ref _flightData, value);
+        set
+        {
+            if (SetProperty(ref _flightData, value))
+            {
+                RebuildAnalytics();
+            }
+        }
+    }
+
+    private AnalyticsSummary _analytics = new AnalyticsSummary();
+    public AnalyticsSummary Analytics
+    {
+        get => _analytics;
+        set => SetProperty(ref _analytics, value);
+    }
+
+    public void RebuildAnalytics(int topCount = 5)
+    {
+        Analytics = _analyticsService.BuildAnalytics(FlightData, topCount);
     }
 }
