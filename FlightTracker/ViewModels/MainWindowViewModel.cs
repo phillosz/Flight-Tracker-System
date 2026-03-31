@@ -1,6 +1,18 @@
-﻿namespace FlightTracker.ViewModels;
+﻿using FlightTracker.Interfaces;
+using FlightTracker.Models;
+using System;
+using System.Threading.Tasks;
 
-public partial class MainWindowViewModel : ViewModelBase
+namespace FlightTracker.ViewModels;
+
+public partial class MainWindowViewModel(ILoadDataService _loadDataService): ViewModelBase
 {
-    public string Greeting { get; } = "Welcome to Avalonia!";
+    private readonly ILoadDataService _loadDataService = _loadDataService;
+
+    private FlightDataRoot _flightData = new FlightDataRoot();
+    public FlightDataRoot FlightData
+    {
+        get => _flightData;
+        set => SetProperty(ref _flightData, value);
+    }
 }
