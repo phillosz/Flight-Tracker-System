@@ -3,19 +3,23 @@
         xmlns:vm="using:FlightTracker.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:mapsui="clr-namespace:Mapsui.UI.Avalonia;assembly=Mapsui.UI.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="FlightTracker.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="FlightTracker">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top"
+                    Orientation="Horizontal"
+                    Spacing="8"
+                    Margin="12">
+            <Button Content="View 1" Command="{Binding ShowView1Command}" />
+            <Button Content="View 2" Command="{Binding ShowView2Command}" />
+            <Button Content="View 3" Command="{Binding ShowView3Command}" />
+        </StackPanel>
 
-    <mapsui:MapControl x:Name="MyMapControl" />
+        <ContentControl Margin="12" Content="{Binding CurrentViewModel}" />
+    </DockPanel>
 
 </Window>

@@ -1,0 +1,176 @@
+{
+  "airports": [
+    { "iataCode": "CPH", "name": "Copenhagen Airport", "city": "Copenhagen", "country": "Denmark", "latitude": 55.6179, "longitude": 12.6560 },
+    { "iataCode": "SGD", "name": "Sønderborg Airport", "city": "Sønderborg", "country": "Denmark", "latitude": 54.9644, "longitude": 9.7918 },
+    { "iataCode": "BLL", "name": "Billund Airport", "city": "Billund", "country": "Denmark", "latitude": 55.7400, "longitude": 9.1519 },
+    { "iataCode": "AAL", "name": "Aalborg Airport", "city": "Aalborg", "country": "Denmark", "latitude": 57.0927, "longitude": 9.8492 },
+    { "iataCode": "AMS", "name": "Amsterdam Airport Schiphol", "city": "Amsterdam", "country": "Netherlands", "latitude": 52.3105, "longitude": 4.7683 },
+    { "iataCode": "LHR", "name": "London Heathrow Airport", "city": "London", "country": "United Kingdom", "latitude": 51.4700, "longitude": -0.4543 },
+    { "iataCode": "CDG", "name": "Paris Charles de Gaulle Airport", "city": "Paris", "country": "France", "latitude": 49.0097, "longitude": 2.5479 },
+    { "iataCode": "FRA", "name": "Frankfurt Airport", "city": "Frankfurt", "country": "Germany", "latitude": 50.0379, "longitude": 8.5622 },
+    { "iataCode": "MUC", "name": "Munich Airport", "city": "Munich", "country": "Germany", "latitude": 48.3538, "longitude": 11.7861 },
+    { "iataCode": "HAM", "name": "Hamburg Airport", "city": "Hamburg", "country": "Germany", "latitude": 53.6303, "longitude": 9.9882 },
+    { "iataCode": "MAD", "name": "Adolfo Suárez Madrid–Barajas Airport", "city": "Madrid", "country": "Spain", "latitude": 40.4719, "longitude": -3.5626 },
+    { "iataCode": "BCN", "name": "Barcelona–El Prat Airport", "city": "Barcelona", "country": "Spain", "latitude": 41.2974, "longitude": 2.0833 },
+    { "iataCode": "FCO", "name": "Leonardo da Vinci–Fiumicino Airport", "city": "Rome", "country": "Italy", "latitude": 41.7999, "longitude": 12.2462 },
+    { "iataCode": "VIE", "name": "Vienna International Airport", "city": "Vienna", "country": "Austria", "latitude": 48.1102, "longitude": 16.5697 },
+    { "iataCode": "ZRH", "name": "Zurich Airport", "city": "Zurich", "country": "Switzerland", "latitude": 47.4647, "longitude": 8.5492 },
+    { "iataCode": "BRU", "name": "Brussels Airport", "city": "Brussels", "country": "Belgium", "latitude": 50.9014, "longitude": 4.4844 },
+    { "iataCode": "ARN", "name": "Stockholm Arlanda Airport", "city": "Stockholm", "country": "Sweden", "latitude": 59.6519, "longitude": 17.9186 },
+    { "iataCode": "OSL", "name": "Oslo Gardermoen Airport", "city": "Oslo", "country": "Norway", "latitude": 60.1976, "longitude": 11.1004 },
+    { "iataCode": "HEL", "name": "Helsinki-Vantaa Airport", "city": "Helsinki", "country": "Finland", "latitude": 60.3172, "longitude": 24.9633 },
+    { "iataCode": "WAW", "name": "Warsaw Chopin Airport", "city": "Warsaw", "country": "Poland", "latitude": 52.1657, "longitude": 20.9671 },
+    { "iataCode": "IST", "name": "Istanbul Airport", "city": "Istanbul", "country": "Turkey", "latitude": 41.2610, "longitude": 28.7421 },
+    { "iataCode": "ATH", "name": "Athens International Airport", "city": "Athens", "country": "Greece", "latitude": 37.9364, "longitude": 23.9445 },
+    { "iataCode": "DXB", "name": "Dubai International Airport", "city": "Dubai", "country": "United Arab Emirates", "latitude": 25.2528, "longitude": 55.3644 },
+    { "iataCode": "JFK", "name": "John F. Kennedy International Airport", "city": "New York", "country": "United States", "latitude": 40.6413, "longitude": -73.7781 }
+  ],
+  "flights": [
+    { "flightNumber": "SK451", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "AMS", "scheduledDeparture": "2026-01-05T07:30:00", "scheduledArrival": "2026-01-05T09:35:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK453", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "AMS", "scheduledDeparture": "2026-01-12T11:00:00", "scheduledArrival": "2026-01-12T13:05:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK455", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "AMS", "scheduledDeparture": "2026-01-19T16:45:00", "scheduledArrival": "2026-01-19T18:50:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "KL1150", "airlineName": "KLM", "airlineCode": "KL", "departureAirport": "CPH", "arrivalAirport": "AMS", "scheduledDeparture": "2026-02-03T08:15:00", "scheduledArrival": "2026-02-03T10:20:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "KL1152", "airlineName": "KLM", "airlineCode": "KL", "departureAirport": "CPH", "arrivalAirport": "AMS", "scheduledDeparture": "2026-02-17T14:30:00", "scheduledArrival": "2026-02-17T16:35:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "KL1154", "airlineName": "KLM", "airlineCode": "KL", "departureAirport": "CPH", "arrivalAirport": "AMS", "scheduledDeparture": "2026-03-02T09:00:00", "scheduledArrival": "2026-03-02T11:05:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+
+    { "flightNumber": "KL1151", "airlineName": "KLM", "airlineCode": "KL", "departureAirport": "AMS", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-05T11:30:00", "scheduledArrival": "2026-01-05T13:35:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "KL1153", "airlineName": "KLM", "airlineCode": "KL", "departureAirport": "AMS", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-20T17:00:00", "scheduledArrival": "2026-01-20T19:05:00", "aircraftType": "Boeing 737 MAX 8", "status": "Landed" },
+    { "flightNumber": "SK452", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "AMS", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-10T10:45:00", "scheduledArrival": "2026-02-10T12:50:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK454", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "AMS", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-05T08:00:00", "scheduledArrival": "2026-03-05T10:05:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "SK901", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "LHR", "scheduledDeparture": "2026-01-06T06:45:00", "scheduledArrival": "2026-01-06T08:30:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK903", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "LHR", "scheduledDeparture": "2026-01-22T12:30:00", "scheduledArrival": "2026-01-22T14:15:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "BA820", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "CPH", "arrivalAirport": "LHR", "scheduledDeparture": "2026-02-08T15:00:00", "scheduledArrival": "2026-02-08T16:45:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "BA822", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "CPH", "arrivalAirport": "LHR", "scheduledDeparture": "2026-03-01T07:30:00", "scheduledArrival": "2026-03-01T09:15:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+
+    { "flightNumber": "BA821", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-06T10:15:00", "scheduledArrival": "2026-01-06T14:00:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK902", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "LHR", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-22T16:30:00", "scheduledArrival": "2026-01-22T20:15:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "BA823", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-14T09:00:00", "scheduledArrival": "2026-02-14T12:45:00", "aircraftType": "Airbus A319", "status": "Landed" },
+
+    { "flightNumber": "LH761", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "CPH", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-07T06:20:00", "scheduledArrival": "2026-01-07T08:10:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "LH763", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "CPH", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-14T13:45:00", "scheduledArrival": "2026-01-14T15:35:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "SK601", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-04T08:00:00", "scheduledArrival": "2026-02-04T09:50:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "LH765", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "CPH", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-25T17:00:00", "scheduledArrival": "2026-02-25T18:50:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "LH767", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "CPH", "arrivalAirport": "FRA", "scheduledDeparture": "2026-03-10T10:30:00", "scheduledArrival": "2026-03-10T12:20:00", "aircraftType": "Airbus A320", "status": "Scheduled" },
+
+    { "flightNumber": "LH762", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-07T09:50:00", "scheduledArrival": "2026-01-07T11:40:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "SK602", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "FRA", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-11T16:00:00", "scheduledArrival": "2026-02-11T17:50:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "LH764", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-05T07:30:00", "scheduledArrival": "2026-03-05T09:20:00", "aircraftType": "Airbus A319", "status": "Landed" },
+
+    { "flightNumber": "SK221", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "OSL", "scheduledDeparture": "2026-01-08T07:00:00", "scheduledArrival": "2026-01-08T08:05:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "SK223", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "OSL", "scheduledDeparture": "2026-01-15T12:30:00", "scheduledArrival": "2026-01-15T13:35:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "SK225", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "OSL", "scheduledDeparture": "2026-02-02T18:00:00", "scheduledArrival": "2026-02-02T19:05:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "DY461", "airlineName": "Norwegian", "airlineCode": "DY", "departureAirport": "CPH", "arrivalAirport": "OSL", "scheduledDeparture": "2026-02-20T08:45:00", "scheduledArrival": "2026-02-20T09:50:00", "aircraftType": "Boeing 737 MAX 8", "status": "Landed" },
+    { "flightNumber": "DY463", "airlineName": "Norwegian", "airlineCode": "DY", "departureAirport": "CPH", "arrivalAirport": "OSL", "scheduledDeparture": "2026-03-12T14:15:00", "scheduledArrival": "2026-03-12T15:20:00", "aircraftType": "Boeing 737 MAX 8", "status": "Scheduled" },
+
+    { "flightNumber": "SK222", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "OSL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-08T09:30:00", "scheduledArrival": "2026-01-08T10:35:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "SK224", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "OSL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-03T15:00:00", "scheduledArrival": "2026-02-03T16:05:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "DY462", "airlineName": "Norwegian", "airlineCode": "DY", "departureAirport": "OSL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-09T11:30:00", "scheduledArrival": "2026-03-09T12:35:00", "aircraftType": "Boeing 737 MAX 8", "status": "Landed" },
+
+    { "flightNumber": "SK341", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "ARN", "scheduledDeparture": "2026-01-09T07:45:00", "scheduledArrival": "2026-01-09T09:00:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK343", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "ARN", "scheduledDeparture": "2026-02-06T14:00:00", "scheduledArrival": "2026-02-06T15:15:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK345", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "ARN", "scheduledDeparture": "2026-03-11T09:00:00", "scheduledArrival": "2026-03-11T10:15:00", "aircraftType": "Airbus A319", "status": "Scheduled" },
+
+    { "flightNumber": "SK342", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "ARN", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-10T10:30:00", "scheduledArrival": "2026-01-10T11:45:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "SK344", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "ARN", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-15T16:30:00", "scheduledArrival": "2026-02-15T17:45:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "SK561", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "SGD", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-10T06:30:00", "scheduledArrival": "2026-01-10T07:05:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK563", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "SGD", "arrivalAirport": "CPH", "scheduledDeparture": "2026-01-24T13:00:00", "scheduledArrival": "2026-01-24T13:35:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK565", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "SGD", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-07T18:15:00", "scheduledArrival": "2026-02-07T18:50:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK567", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "SGD", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-02T07:00:00", "scheduledArrival": "2026-03-02T07:35:00", "aircraftType": "Bombardier CRJ-900", "status": "Landed" },
+
+    { "flightNumber": "SK562", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "SGD", "scheduledDeparture": "2026-01-10T08:00:00", "scheduledArrival": "2026-01-10T08:35:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK564", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "SGD", "scheduledDeparture": "2026-02-07T14:30:00", "scheduledArrival": "2026-02-07T15:05:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK566", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "SGD", "scheduledDeparture": "2026-03-13T07:00:00", "scheduledArrival": "2026-03-13T07:35:00", "aircraftType": "ATR 72-600", "status": "Scheduled" },
+
+    { "flightNumber": "BA453", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "CDG", "scheduledDeparture": "2026-01-11T08:30:00", "scheduledArrival": "2026-01-11T10:35:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "AF1180", "airlineName": "Air France", "airlineCode": "AF", "departureAirport": "LHR", "arrivalAirport": "CDG", "scheduledDeparture": "2026-01-25T11:15:00", "scheduledArrival": "2026-01-25T13:20:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "BA455", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "CDG", "scheduledDeparture": "2026-02-12T15:00:00", "scheduledArrival": "2026-02-12T17:05:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "AF1181", "airlineName": "Air France", "airlineCode": "AF", "departureAirport": "CDG", "arrivalAirport": "LHR", "scheduledDeparture": "2026-01-11T12:00:00", "scheduledArrival": "2026-01-11T12:05:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "BA454", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "CDG", "arrivalAirport": "LHR", "scheduledDeparture": "2026-02-02T09:30:00", "scheduledArrival": "2026-02-02T09:35:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "LH404", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "JFK", "scheduledDeparture": "2026-01-12T10:30:00", "scheduledArrival": "2026-01-12T13:45:00", "aircraftType": "Boeing 747-400", "status": "Landed" },
+    { "flightNumber": "LH406", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "JFK", "scheduledDeparture": "2026-02-09T11:00:00", "scheduledArrival": "2026-02-09T14:15:00", "aircraftType": "Airbus A330-300", "status": "Landed" },
+    { "flightNumber": "LH408", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "JFK", "scheduledDeparture": "2026-03-08T10:30:00", "scheduledArrival": "2026-03-08T13:45:00", "aircraftType": "Boeing 787-9", "status": "Landed" },
+
+    { "flightNumber": "LH405", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "JFK", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-13T17:30:00", "scheduledArrival": "2026-01-14T07:15:00", "aircraftType": "Boeing 747-400", "status": "Landed" },
+    { "flightNumber": "LH407", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "JFK", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-16T18:00:00", "scheduledArrival": "2026-02-17T07:45:00", "aircraftType": "Airbus A330-300", "status": "Landed" },
+
+    { "flightNumber": "BA175", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "JFK", "scheduledDeparture": "2026-01-14T11:00:00", "scheduledArrival": "2026-01-14T14:00:00", "aircraftType": "Boeing 787-9", "status": "Landed" },
+    { "flightNumber": "BA177", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "JFK", "scheduledDeparture": "2026-02-22T12:30:00", "scheduledArrival": "2026-02-22T15:30:00", "aircraftType": "Boeing 787-9", "status": "Landed" },
+    { "flightNumber": "BA179", "airlineName": "British Airways", "airlineCode": "BA", "departureAirport": "LHR", "arrivalAirport": "JFK", "scheduledDeparture": "2026-03-13T11:00:00", "scheduledArrival": "2026-03-13T14:00:00", "aircraftType": "Boeing 787-9", "status": "Scheduled" },
+
+    { "flightNumber": "EK152", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "DXB", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-16T03:10:00", "scheduledArrival": "2026-01-16T07:35:00", "aircraftType": "Airbus A380-800", "status": "Landed" },
+    { "flightNumber": "EK154", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "DXB", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-13T03:10:00", "scheduledArrival": "2026-02-13T07:35:00", "aircraftType": "Boeing 777-300ER", "status": "Landed" },
+    { "flightNumber": "EK153", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "FRA", "arrivalAirport": "DXB", "scheduledDeparture": "2026-01-16T21:30:00", "scheduledArrival": "2026-01-17T06:00:00", "aircraftType": "Airbus A380-800", "status": "Landed" },
+    { "flightNumber": "EK155", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "FRA", "arrivalAirport": "DXB", "scheduledDeparture": "2026-03-07T22:00:00", "scheduledArrival": "2026-03-08T06:30:00", "aircraftType": "Boeing 777-300ER", "status": "Landed" },
+
+    { "flightNumber": "EK007", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "DXB", "arrivalAirport": "LHR", "scheduledDeparture": "2026-01-18T08:35:00", "scheduledArrival": "2026-01-18T13:15:00", "aircraftType": "Airbus A380-800", "status": "Landed" },
+    { "flightNumber": "EK009", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "DXB", "arrivalAirport": "LHR", "scheduledDeparture": "2026-02-28T09:00:00", "scheduledArrival": "2026-02-28T13:40:00", "aircraftType": "Airbus A380-800", "status": "Landed" },
+    { "flightNumber": "EK008", "airlineName": "Emirates", "airlineCode": "EK", "departureAirport": "LHR", "arrivalAirport": "DXB", "scheduledDeparture": "2026-01-19T21:30:00", "scheduledArrival": "2026-01-20T07:25:00", "aircraftType": "Airbus A380-800", "status": "Landed" },
+
+    { "flightNumber": "TK751", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "IST", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-20T06:00:00", "scheduledArrival": "2026-01-20T09:00:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "TK753", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "IST", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-18T07:30:00", "scheduledArrival": "2026-02-18T10:30:00", "aircraftType": "Airbus A321", "status": "Landed" },
+    { "flightNumber": "TK752", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "FRA", "arrivalAirport": "IST", "scheduledDeparture": "2026-01-20T11:30:00", "scheduledArrival": "2026-01-20T14:30:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "TK1617", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "IST", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-05T14:00:00", "scheduledArrival": "2026-02-05T16:40:00", "aircraftType": "Airbus A321", "status": "Landed" },
+    { "flightNumber": "TK1618", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "CPH", "arrivalAirport": "IST", "scheduledDeparture": "2026-02-26T18:00:00", "scheduledArrival": "2026-02-26T22:45:00", "aircraftType": "Airbus A321", "status": "Landed" },
+    { "flightNumber": "TK1619", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "CPH", "arrivalAirport": "IST", "scheduledDeparture": "2026-03-13T08:30:00", "scheduledArrival": "2026-03-13T13:15:00", "aircraftType": "Airbus A321", "status": "Scheduled" },
+
+    { "flightNumber": "LH2444", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "MUC", "scheduledDeparture": "2026-01-21T07:00:00", "scheduledArrival": "2026-01-21T07:55:00", "aircraftType": "Embraer E190", "status": "Landed" },
+    { "flightNumber": "LH2446", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FRA", "arrivalAirport": "MUC", "scheduledDeparture": "2026-02-11T10:30:00", "scheduledArrival": "2026-02-11T11:25:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "LH2445", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "MUC", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-21T09:00:00", "scheduledArrival": "2026-01-21T09:55:00", "aircraftType": "Embraer E190", "status": "Landed" },
+
+    { "flightNumber": "AF1341", "airlineName": "Air France", "airlineCode": "AF", "departureAirport": "CDG", "arrivalAirport": "MAD", "scheduledDeparture": "2026-01-23T09:00:00", "scheduledArrival": "2026-01-23T11:15:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "AF1343", "airlineName": "Air France", "airlineCode": "AF", "departureAirport": "CDG", "arrivalAirport": "MAD", "scheduledDeparture": "2026-02-19T14:30:00", "scheduledArrival": "2026-02-19T16:45:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "IB3160", "airlineName": "Iberia", "airlineCode": "IB", "departureAirport": "MAD", "arrivalAirport": "LHR", "scheduledDeparture": "2026-01-28T07:30:00", "scheduledArrival": "2026-01-28T10:00:00", "aircraftType": "Airbus A321", "status": "Landed" },
+    { "flightNumber": "IB3162", "airlineName": "Iberia", "airlineCode": "IB", "departureAirport": "MAD", "arrivalAirport": "LHR", "scheduledDeparture": "2026-03-03T09:00:00", "scheduledArrival": "2026-03-03T11:30:00", "aircraftType": "Airbus A321", "status": "Landed" },
+
+    { "flightNumber": "AZ608", "airlineName": "ITA Airways", "airlineCode": "AZ", "departureAirport": "FCO", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-29T08:00:00", "scheduledArrival": "2026-01-29T10:30:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "LH3608", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "FCO", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-23T11:45:00", "scheduledArrival": "2026-02-23T14:15:00", "aircraftType": "Airbus A321", "status": "Landed" },
+
+    { "flightNumber": "LO343", "airlineName": "LOT Polish Airlines", "airlineCode": "LO", "departureAirport": "WAW", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-31T07:30:00", "scheduledArrival": "2026-01-31T09:45:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "LO345", "airlineName": "LOT Polish Airlines", "airlineCode": "LO", "departureAirport": "WAW", "arrivalAirport": "FRA", "scheduledDeparture": "2026-03-04T08:00:00", "scheduledArrival": "2026-03-04T10:15:00", "aircraftType": "Embraer E190", "status": "Landed" },
+    { "flightNumber": "LO344", "airlineName": "LOT Polish Airlines", "airlineCode": "LO", "departureAirport": "FRA", "arrivalAirport": "WAW", "scheduledDeparture": "2026-02-01T11:30:00", "scheduledArrival": "2026-02-01T13:45:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+
+    { "flightNumber": "OS071", "airlineName": "Austrian Airlines", "airlineCode": "OS", "departureAirport": "VIE", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-01T06:45:00", "scheduledArrival": "2026-02-01T08:30:00", "aircraftType": "Bombardier CRJ-900", "status": "Landed" },
+    { "flightNumber": "OS073", "airlineName": "Austrian Airlines", "airlineCode": "OS", "departureAirport": "VIE", "arrivalAirport": "FRA", "scheduledDeparture": "2026-03-06T13:00:00", "scheduledArrival": "2026-03-06T14:45:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "SK521", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "MUC", "scheduledDeparture": "2026-02-06T07:00:00", "scheduledArrival": "2026-02-06T09:00:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "LH723", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "MUC", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-07T10:30:00", "scheduledArrival": "2026-02-07T12:30:00", "aircraftType": "Airbus A321", "status": "Landed" },
+
+    { "flightNumber": "AY981", "airlineName": "Finnair", "airlineCode": "AY", "departureAirport": "HEL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-09T08:30:00", "scheduledArrival": "2026-02-09T09:50:00", "aircraftType": "Embraer E190", "status": "Landed" },
+    { "flightNumber": "AY983", "airlineName": "Finnair", "airlineCode": "AY", "departureAirport": "HEL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-09T14:30:00", "scheduledArrival": "2026-03-09T15:50:00", "aircraftType": "Embraer E190", "status": "Landed" },
+    { "flightNumber": "SK711", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "HEL", "scheduledDeparture": "2026-02-10T06:45:00", "scheduledArrival": "2026-02-10T09:00:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "FR1234", "airlineName": "Ryanair", "airlineCode": "FR", "departureAirport": "CPH", "arrivalAirport": "BCN", "scheduledDeparture": "2026-02-13T06:00:00", "scheduledArrival": "2026-02-13T09:30:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "FR1236", "airlineName": "Ryanair", "airlineCode": "FR", "departureAirport": "CPH", "arrivalAirport": "BCN", "scheduledDeparture": "2026-03-11T07:00:00", "scheduledArrival": "2026-03-11T10:30:00", "aircraftType": "Boeing 737 MAX 8", "status": "Scheduled" },
+    { "flightNumber": "VY1268", "airlineName": "Vueling", "airlineCode": "VY", "departureAirport": "BCN", "arrivalAirport": "CDG", "scheduledDeparture": "2026-02-14T08:00:00", "scheduledArrival": "2026-02-14T10:15:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "U24521", "airlineName": "EasyJet", "airlineCode": "U2", "departureAirport": "LHR", "arrivalAirport": "BCN", "scheduledDeparture": "2026-02-16T07:30:00", "scheduledArrival": "2026-02-16T11:15:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "U24523", "airlineName": "EasyJet", "airlineCode": "U2", "departureAirport": "LHR", "arrivalAirport": "BCN", "scheduledDeparture": "2026-03-12T06:45:00", "scheduledArrival": "2026-03-12T10:30:00", "aircraftType": "Airbus A320", "status": "Scheduled" },
+
+    { "flightNumber": "SK481", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "BLL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-18T07:30:00", "scheduledArrival": "2026-02-18T08:10:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK483", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "BLL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-10T16:00:00", "scheduledArrival": "2026-03-10T16:40:00", "aircraftType": "ATR 72-600", "status": "Scheduled" },
+    { "flightNumber": "SK482", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "BLL", "scheduledDeparture": "2026-02-24T10:00:00", "scheduledArrival": "2026-02-24T10:40:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+
+    { "flightNumber": "SK301", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "AAL", "arrivalAirport": "CPH", "scheduledDeparture": "2026-03-03T07:00:00", "scheduledArrival": "2026-03-03T07:45:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+    { "flightNumber": "SK302", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "CPH", "arrivalAirport": "AAL", "scheduledDeparture": "2026-03-03T09:00:00", "scheduledArrival": "2026-03-03T09:45:00", "aircraftType": "ATR 72-600", "status": "Landed" },
+
+    { "flightNumber": "SK241", "airlineName": "Scandinavian Airlines", "airlineCode": "SK", "departureAirport": "OSL", "arrivalAirport": "ARN", "scheduledDeparture": "2026-03-07T08:00:00", "scheduledArrival": "2026-03-07T09:05:00", "aircraftType": "Boeing 737-800", "status": "Landed" },
+    { "flightNumber": "AY133", "airlineName": "Finnair", "airlineCode": "AY", "departureAirport": "HEL", "arrivalAirport": "ARN", "scheduledDeparture": "2026-03-08T09:30:00", "scheduledArrival": "2026-03-08T10:15:00", "aircraftType": "Embraer E190", "status": "Landed" },
+
+    { "flightNumber": "LH2441", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "HAM", "arrivalAirport": "FRA", "scheduledDeparture": "2026-01-26T06:30:00", "scheduledArrival": "2026-01-26T07:30:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "LH2443", "airlineName": "Lufthansa", "airlineCode": "LH", "departureAirport": "HAM", "arrivalAirport": "FRA", "scheduledDeparture": "2026-02-27T11:00:00", "scheduledArrival": "2026-02-27T12:00:00", "aircraftType": "Airbus A319", "status": "Landed" },
+
+    { "flightNumber": "LX1474", "airlineName": "SWISS", "airlineCode": "LX", "departureAirport": "ZRH", "arrivalAirport": "LHR", "scheduledDeparture": "2026-01-27T07:30:00", "scheduledArrival": "2026-01-27T09:15:00", "aircraftType": "Airbus A320", "status": "Landed" },
+    { "flightNumber": "LX1476", "airlineName": "SWISS", "airlineCode": "LX", "departureAirport": "ZRH", "arrivalAirport": "LHR", "scheduledDeparture": "2026-02-24T14:00:00", "scheduledArrival": "2026-02-24T15:45:00", "aircraftType": "Airbus A320", "status": "Landed" },
+
+    { "flightNumber": "SN691", "airlineName": "Brussels Airlines", "airlineCode": "SN", "departureAirport": "BRU", "arrivalAirport": "CDG", "scheduledDeparture": "2026-01-30T08:15:00", "scheduledArrival": "2026-01-30T09:35:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "SN693", "airlineName": "Brussels Airlines", "airlineCode": "SN", "departureAirport": "BRU", "arrivalAirport": "CPH", "scheduledDeparture": "2026-02-21T10:00:00", "scheduledArrival": "2026-02-21T12:00:00", "aircraftType": "Airbus A319", "status": "Landed" },
+
+    { "flightNumber": "TK1789", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "IST", "arrivalAirport": "ATH", "scheduledDeparture": "2026-02-22T09:00:00", "scheduledArrival": "2026-02-22T10:30:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "TK1790", "airlineName": "Turkish Airlines", "airlineCode": "TK", "departureAirport": "ATH", "arrivalAirport": "IST", "scheduledDeparture": "2026-02-22T12:00:00", "scheduledArrival": "2026-02-22T13:30:00", "aircraftType": "Airbus A319", "status": "Landed" },
+    { "flightNumber": "A3301", "airlineName": "Aegean Airlines", "airlineCode": "A3", "departureAirport": "ATH", "arrivalAirport": "FRA", "scheduledDeparture": "2026-03-06T07:00:00", "scheduledArrival": "2026-03-06T10:00:00", "aircraftType": "Airbus A320", "status": "Landed" }
+  ]
+}

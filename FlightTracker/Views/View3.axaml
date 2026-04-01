@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="FlightTracker.Views.View3">
+
+	<Grid>
+		<TextBlock HorizontalAlignment="Center"
+				   VerticalAlignment="Center"
+				   Text="View 3" />
+	</Grid>
+
+</UserControl>
