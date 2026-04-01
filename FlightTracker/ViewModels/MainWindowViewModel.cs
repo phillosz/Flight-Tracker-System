@@ -1,6 +1,9 @@
 ﻿using FlightTracker.Interfaces;
 using FlightTracker.Models;
 using CommunityToolkit.Mvvm.Input;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace FlightTracker.ViewModels;
 
@@ -29,6 +32,36 @@ public partial class MainWindowViewModel : ViewModelBase
         ShowView3Command = new RelayCommand(() => CurrentViewModel = _view3ViewModel);
 
         CurrentViewModel = _view1ViewModel;
+
+        _ = InitializeSubViewsAsync();
+    }
+
+    private async Task InitializeSubViewsAsync()
+    {
+        var flightsPath = ResolveFlightsPath();
+        await _view2ViewModel.InitializeAsync(flightsPath);
+        await _view3ViewModel.InitializeAsync(flightsPath);
+    }
+
+    private static string ResolveFlightsPath()
+    {
+        var candidates = new[]
+        {
+            Path.Combine(AppContext.BaseDirectory, "Data", "flights.json"),
+            Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Data", "flights.json")),
+            Path.Combine(Directory.GetCurrentDirectory(), "FlightTracker", "Data", "flights.json"),
+            Path.Combine(Directory.GetCurrentDirectory(), "Data", "flights.json")
+        };
+
+        foreach (var candidate in candidates)
+        {
+            if (File.Exists(candidate))
+            {
+                return candidate;
+            }
+        }
+
+        return candidates[0];
     }
 
     private ViewModelBase _currentViewModel = null!;

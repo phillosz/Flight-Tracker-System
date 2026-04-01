@@ -1,11 +1,15 @@
 <UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:vm="using:FlightTracker.ViewModels"
+			 x:DataType="vm:View2ViewModel"
 			 x:Class="FlightTracker.Views.View2">
 
-	<Grid>
-		<TextBlock HorizontalAlignment="Center"
-				   VerticalAlignment="Center"
-				   Text="View 2" />
-	</Grid>
+	<StackPanel Margin="16" Spacing="8">
+		<TextBlock Text="View 2 - Load Stats" FontWeight="Bold" />
+		<TextBlock Text="{Binding LoadStatus}" />
+		<TextBlock Text="{Binding AirportCount, StringFormat='Airports: {0}'}" />
+		<TextBlock Text="{Binding FlightCount, StringFormat='Flights: {0}'}" />
+		<TextBlock Text="{Binding AirlineCount, StringFormat='Airlines: {0}'}" />
+	</StackPanel>
 
 </UserControl>

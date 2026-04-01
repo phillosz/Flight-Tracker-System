@@ -1,11 +1,17 @@
 <UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:vm="using:FlightTracker.ViewModels"
+			 x:DataType="vm:View3ViewModel"
 			 x:Class="FlightTracker.Views.View3">
 
-	<Grid>
-		<TextBlock HorizontalAlignment="Center"
-				   VerticalAlignment="Center"
-				   Text="View 3" />
-	</Grid>
+	<StackPanel Margin="16" Spacing="8">
+		<TextBlock Text="View 3 - Analytics Stats" FontWeight="Bold" />
+		<TextBlock Text="{Binding LoadStatus}" />
+		<TextBlock Text="{Binding TopRoutesCount, StringFormat='Top Routes: {0}'}" />
+		<TextBlock Text="{Binding TopAirlinesCount, StringFormat='Top Airlines: {0}'}" />
+		<TextBlock Text="{Binding TimeBucketsCount, StringFormat='Time Buckets: {0}'}" />
+		<TextBlock Text="{Binding TopRoutePreview, StringFormat='Top Route: {0}'}" />
+		<TextBlock Text="{Binding TopAirlinePreview, StringFormat='Top Airline: {0}'}" />
+	</StackPanel>
 
 </UserControl>
