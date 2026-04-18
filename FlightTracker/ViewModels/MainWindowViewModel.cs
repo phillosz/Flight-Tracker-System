@@ -39,6 +39,7 @@ public partial class MainWindowViewModel : ViewModelBase
     private async Task InitializeSubViewsAsync()
     {
         var flightsPath = ResolveFlightsPath();
+        await _view1ViewModel.InitializeAsync(flightsPath);
         await _view2ViewModel.InitializeAsync(flightsPath);
         await _view3ViewModel.InitializeAsync(flightsPath);
     }
