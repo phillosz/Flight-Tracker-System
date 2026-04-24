@@ -1,17 +1,67 @@
 <UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:vm="using:FlightTracker.ViewModels"
+			 xmlns:model="using:FlightTracker.Models"
 			 x:DataType="vm:View3ViewModel"
 			 x:Class="FlightTracker.Views.View3">
 
-	<StackPanel Margin="16" Spacing="8">
-		<TextBlock Text="View 3 - Analytics Stats" FontWeight="Bold" />
-		<TextBlock Text="{Binding LoadStatus}" />
-		<TextBlock Text="{Binding TopRoutesCount, StringFormat='Top Routes: {0}'}" />
-		<TextBlock Text="{Binding TopAirlinesCount, StringFormat='Top Airlines: {0}'}" />
-		<TextBlock Text="{Binding TimeBucketsCount, StringFormat='Time Buckets: {0}'}" />
-		<TextBlock Text="{Binding TopRoutePreview, StringFormat='Top Route: {0}'}" />
-		<TextBlock Text="{Binding TopAirlinePreview, StringFormat='Top Airline: {0}'}" />
+	<ScrollViewer Margin="16">
+	<StackPanel Spacing="8">
+
+		<TextBlock Text="Top Routes" FontWeight="SemiBold" Margin="0,8,0,0" />
+		<ItemsControl ItemsSource="{Binding Analytics.TopRoutes}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="model:RouteTrafficMetric">
+					<StackPanel Orientation="Horizontal" Spacing="4">
+						<TextBlock Text="-" />
+						<TextBlock Text="{Binding DepartureAirport}" />
+						<TextBlock Text="->" />
+						<TextBlock Text="{Binding ArrivalAirport}" />
+						<TextBlock Text=":" />
+						<TextBlock Text="{Binding FlightsCount}" />
+						<TextBlock Text="flights" />
+					</StackPanel>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+
+		<TextBlock Text="Top Airlines" FontWeight="SemiBold" Margin="0,8,0,0" />
+		<ItemsControl ItemsSource="{Binding Analytics.TopAirlines}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="model:AirlineTrafficMetric">
+					<StackPanel Orientation="Horizontal" Spacing="4">
+						<TextBlock Text="-" />
+						<TextBlock Text="{Binding AirlineName}" />
+						<TextBlock Text=":" />
+						<TextBlock Text="{Binding FlightsCount}" />
+						<TextBlock Text="flights" />
+					</StackPanel>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+
+		<TextBlock Text="Traffic By Time Of Day" FontWeight="SemiBold" Margin="0,8,0,0" />
+		<ItemsControl ItemsSource="{Binding Analytics.TrafficByTimeOfDay}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="model:TimeOfDayTrafficMetric">
+					<StackPanel Orientation="Horizontal" Spacing="4">
+						<TextBlock Text="-" />
+						<TextBlock Text="{Binding TimeOfDay}" />
+						<TextBlock Text=":" />
+						<TextBlock Text="{Binding FlightsCount}" />
+						<TextBlock Text="flights" />
+					</StackPanel>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		<TextBlock Text="Time bucket ranges: Morning 05:00-11:59, Afternoon 12:00-16:59, Evening 17:00-21:59, Night 22:00-04:59" TextWrapping="Wrap" Foreground="#555555" Margin="0,4,0,0" />
+		<StackPanel Orientation="Horizontal" Spacing="10" Margin="0,12,0,0">
+			<Button Content="Export Analytics Report"
+					Command="{Binding ExportAnalyticsTextCommand}" />
+			<TextBlock Text="{Binding ExportStatus}" VerticalAlignment="Center" Foreground="#666666" />
+		</StackPanel>
+		
 	</StackPanel>
+	</ScrollViewer>
 
 </UserControl>

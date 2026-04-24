@@ -26,7 +26,11 @@ public partial class App : Application
             DisableAvaloniaDataAnnotationValidation();
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(new Services.LoadDataService(), new Services.AnalyticsService(), new Services.ExportDataService()),
+                DataContext = new MainWindowViewModel(
+                    new Services.LoadDataService(),
+                    new Services.AnalyticsService(),
+                    new Services.ExportDataService(),
+                    new Services.UserPreferencesService()),
             };
         }
 

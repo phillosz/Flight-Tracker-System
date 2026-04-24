@@ -8,4 +8,6 @@ public interface IExportDataService
     Task ExportFlightsToCsvAsync(FlightDataRoot data, string filePath);
 
     Task ExportAnalyticsToCsvAsync(AnalyticsSummary analytics, string filePath);
+
+    Task ExportAnalyticsToTextAsync(AnalyticsSummary analytics, string filePath);
 }

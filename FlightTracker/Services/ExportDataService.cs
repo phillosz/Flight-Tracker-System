@@ -86,6 +86,72 @@ public class ExportDataService : IExportDataService
         await File.WriteAllTextAsync(filePath, csv.ToString());
     }
 
+    public async Task ExportAnalyticsToTextAsync(AnalyticsSummary analytics, string filePath)
+    {
+        ArgumentNullException.ThrowIfNull(analytics);
+        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+
+        var directory = Path.GetDirectoryName(filePath);
+        if (!string.IsNullOrWhiteSpace(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
+        var report = new StringBuilder();
+        report.AppendLine("FLIGHT ANALYTICS REPORT");
+        report.AppendLine($"Generated: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+        report.AppendLine(new string('=', 50));
+        report.AppendLine();
+
+        report.AppendLine("Top Routes");
+        report.AppendLine("----------");
+        if (analytics.TopRoutes.Count == 0)
+        {
+            report.AppendLine("No route data available.");
+        }
+        else
+        {
+            for (var i = 0; i < analytics.TopRoutes.Count; i++)
+            {
+                var route = analytics.TopRoutes[i];
+                report.AppendLine($"{i + 1}. {route.DepartureAirport} -> {route.ArrivalAirport}: {route.FlightsCount} flights");
+            }
+        }
+
+        report.AppendLine();
+        report.AppendLine("Top Airlines");
+        report.AppendLine("------------");
+        if (analytics.TopAirlines.Count == 0)
+        {
+            report.AppendLine("No airline data available.");
+        }
+        else
+        {
+            for (var i = 0; i < analytics.TopAirlines.Count; i++)
+            {
+                var airline = analytics.TopAirlines[i];
+                report.AppendLine($"{i + 1}. {airline.AirlineName}: {airline.FlightsCount} flights");
+            }
+        }
+
+        report.AppendLine();
+        report.AppendLine("Traffic By Time Of Day");
+        report.AppendLine("----------------------");
+        if (analytics.TrafficByTimeOfDay.Count == 0)
+        {
+            report.AppendLine("No time-of-day data available.");
+        }
+        else
+        {
+            foreach (var metric in analytics.TrafficByTimeOfDay)
+            {
+                report.AppendLine($"- {metric.TimeOfDay}: {metric.FlightsCount} flights");
+            }
+        }
+
+        await File.WriteAllTextAsync(filePath, report.ToString());
+    }
+
     private static string EscapeCsv(string value)
     {
         if (string.IsNullOrEmpty(value))

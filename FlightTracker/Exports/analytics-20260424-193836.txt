@@ -1,0 +1,26 @@
+FLIGHT ANALYTICS REPORT
+Generated: 2026-04-24 19:38:36
+==================================================
+
+Top Routes
+----------
+1. CPH -> AMS: 6 flights
+2. CPH -> FRA: 5 flights
+3. CPH -> OSL: 5 flights
+4. AMS -> CPH: 4 flights
+5. CPH -> LHR: 4 flights
+
+Top Airlines
+------------
+1. Scandinavian Airlines: 35 flights
+2. Lufthansa: 18 flights
+3. British Airways: 10 flights
+4. Turkish Airlines: 8 flights
+5. Emirates: 7 flights
+
+Traffic By Time Of Day
+----------------------
+- Morning: 75 flights
+- Afternoon: 24 flights
+- Evening: 9 flights
+- Night: 3 flights

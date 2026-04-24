@@ -21,6 +21,12 @@
 					</DataTemplate>
 				</ComboBox.ItemTemplate>
 			</ComboBox>
+			<Button Content="Clear Selection"
+					Command="{Binding ClearSelectionCommand}" />
+		</StackPanel>
+
+		<StackPanel DockPanel.Dock="Top" Margin="12,0,12,12">
+			<TextBlock Text="{Binding PreferenceStatus}" Foreground="#666666" />
 		</StackPanel>
 
 		<Grid Margin="12">

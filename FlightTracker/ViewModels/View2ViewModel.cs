@@ -1,7 +1,9 @@
 using CommunityToolkit.Mvvm.Input;
 using FlightTracker.Interfaces;
 using FlightTracker.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,12 +14,14 @@ public partial class View2ViewModel : ViewModelBase
     private readonly ILoadDataService _loadDataService;
     private readonly IAnalyticsService _analyticsService;
     private readonly IExportDataService _exportDataService;
+    private readonly IUserPreferencesService _userPreferencesService;
 
-    public View2ViewModel(ILoadDataService loadDataService, IAnalyticsService analyticsService, IExportDataService exportDataService)
+    public View2ViewModel(ILoadDataService loadDataService, IAnalyticsService analyticsService, IExportDataService exportDataService, IUserPreferencesService userPreferencesService)
     {
         _loadDataService = loadDataService;
         _analyticsService = analyticsService;
         _exportDataService = exportDataService;
+        _userPreferencesService = userPreferencesService;
 
     }
 
@@ -33,6 +37,13 @@ public partial class View2ViewModel : ViewModelBase
     {
         get => _loadStatus;
         set => SetProperty(ref _loadStatus, value);
+    }
+
+    private string _exportStatus = "No export generated";
+    public string ExportStatus
+    {
+        get => _exportStatus;
+        set => SetProperty(ref _exportStatus, value);
     }
 
     private int _airportCount;
@@ -72,6 +83,7 @@ public partial class View2ViewModel : ViewModelBase
             if (SetProperty(ref _selectedAirport, value))
             {
                 ShowSelectedAirportInfo();
+                PersistSelectedAirport();
             }
         }
     }
@@ -117,6 +129,7 @@ public partial class View2ViewModel : ViewModelBase
             FlightCount = FlightData.Flights.Count;
             AirlineCount = FlightData.Flights.Select(f => f.AirlineCode).Distinct().Count();
             LoadStatus = "Data loaded successfully";
+            RestoreSavedSelection();
         }
         catch (System.Exception ex)
         {
@@ -174,6 +187,65 @@ public partial class View2ViewModel : ViewModelBase
         }
 
         DisplayedFlights = flights;
+    }
+
+    private void PersistSelectedAirport()
+    {
+        if (SelectedAirport is null)
+        {
+            _userPreferencesService.ClearPreferences();
+            return;
+        }
+
+        _userPreferencesService.SavePreferences(new UserPreferences
+        {
+            LastSelectedAirportCode = SelectedAirport.IataCode
+        });
+    }
+
+    private void RestoreSavedSelection()
+    {
+        var preferences = _userPreferencesService.LoadPreferences();
+        if (string.IsNullOrWhiteSpace(preferences.LastSelectedAirportCode))
+        {
+            return;
+        }
+
+        var airport = Airports.FirstOrDefault(item =>
+            item.IataCode.Equals(preferences.LastSelectedAirportCode, StringComparison.OrdinalIgnoreCase));
+
+        if (airport is not null)
+        {
+            SelectedAirport = airport;
+        }
+    }
+
+    [RelayCommand]
+    private async Task ExportFlightsCsvAsync()
+    {
+        try
+        {
+            var filteredFlights = DisplayedFlights.ToList();
+            if (filteredFlights.Count == 0)
+            {
+                ExportStatus = "Export failed: no filtered flights to export.";
+                return;
+            }
+
+            var exportDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Exports");
+            var filePath = Path.Combine(exportDirectory, $"flights-{DateTime.Now:yyyyMMdd-HHmmss}.csv");
+            var exportData = new FlightDataRoot
+            {
+                Flights = filteredFlights
+            };
+
+            await _exportDataService.ExportFlightsToCsvAsync(exportData, filePath);
+            ExportStatus = $"Export created: {filePath}";
+        }
+        catch (Exception ex)
+        {
+            ExportStatus = $"Export failed: {ex.Message}";
+        }
     }
 }
 
