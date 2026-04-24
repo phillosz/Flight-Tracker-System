@@ -43,5 +43,5 @@ Desktop flight-tracking app built with Avalonia and .NET 9.
 
 ## Notes
 
-- Input data file: FlightTracker/Data/flights.json
+- Input data files: FlightTracker/Data
 - Export output folder: FlightTracker/Exports
