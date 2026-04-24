@@ -32,7 +32,7 @@ Desktop flight-tracking app built with Avalonia and .NET 9.
 
 	dotnet test FlightTracker.sln
 
-## App Components (Brief)
+## App Components
 
 - View 1 (Route Map): Select an airport and visualize routes on a map.
 - View 2 (Flights): Browse flights by airport, filter by status, export filtered flights to CSV.
