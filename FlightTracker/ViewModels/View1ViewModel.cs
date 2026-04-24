@@ -62,6 +62,20 @@ public partial class View1ViewModel : ViewModelBase
         set => SetProperty(ref _preferenceStatus, value);
     }
 
+    private string _flightSearchQuery = string.Empty;
+    public string FlightSearchQuery
+    {
+        get => _flightSearchQuery;
+        set => SetProperty(ref _flightSearchQuery, value);
+    }
+
+    private string _searchStatus = "Showing all flights for selected airport.";
+    public string SearchStatus
+    {
+        get => _searchStatus;
+        set => SetProperty(ref _searchStatus, value);
+    }
+
     public async Task InitializeAsync(string filePath)
     {
         FlightData = await _loadDataService.LoadDataAsync(filePath);
@@ -106,11 +120,49 @@ public partial class View1ViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private void ClearSelection()
+    private void SearchFlight()
     {
+        var query = FlightSearchQuery?.Trim();
+        if (string.IsNullOrWhiteSpace(query))
+        {
+            return;
+        }
+
+        var match = FlightData.Flights.FirstOrDefault(flight =>
+            flight.FlightNumber.Equals(query, StringComparison.OrdinalIgnoreCase)
+            || flight.AirlineName.Equals(query, StringComparison.OrdinalIgnoreCase));
+
+        match ??= FlightData.Flights.FirstOrDefault(flight =>
+            flight.FlightNumber.Contains(query, StringComparison.OrdinalIgnoreCase)
+            || flight.AirlineName.Contains(query, StringComparison.OrdinalIgnoreCase));
+
+        if (match is null)
+        {
+            return;
+        }
+
+        var airport = FlightData.Airports.FirstOrDefault(item =>
+            item.IataCode.Equals(match.DepartureAirport, StringComparison.OrdinalIgnoreCase));
+
+        if (airport is null)
+        {
+            return;
+        }
+
+        FlightSearchQuery = match.FlightNumber;
+        SelectedAirport = airport;
+        ApplyFlightPathsToMap();
+        SearchStatus = $"Showing flight {match.FlightNumber}: {match.DepartureAirport} -> {match.ArrivalAirport}.";
+    }
+
+    [RelayCommand]
+    private void ClearAll()
+    {
+        FlightSearchQuery = string.Empty;
         SelectedAirport = null;
         _userPreferencesService.ClearPreferences();
         PreferenceStatus = "Saved airport preference cleared.";
+        SearchStatus = "Showing all flights for selected airport.";
     }
 
     [RelayCommand]
@@ -119,14 +171,33 @@ public partial class View1ViewModel : ViewModelBase
         if (SelectedAirport is null)
         {
             FlightPaths = [];
+            SearchStatus = "Select an airport to search routes.";
             FlightPathsUpdated?.Invoke();
             return;
         }
 
-        var paths = GetFlightPaths();
-        FlightPaths = paths.TryGetValue(SelectedAirport.IataCode, out var selectedPaths)
-            ? selectedPaths
-            : [];
+        var query = FlightSearchQuery?.Trim() ?? string.Empty;
+        var selectedFlights = FlightData.Flights
+            .Where(flight => flight.DepartureAirport == SelectedAirport.IataCode)
+            .Where(flight => string.IsNullOrWhiteSpace(query)
+                || flight.FlightNumber.Contains(query, StringComparison.OrdinalIgnoreCase)
+                || flight.AirlineName.Contains(query, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        FlightPaths = selectedFlights
+            .Select(flight =>
+            {
+                var origin = GetLatLon(flight.DepartureAirport);
+                var destination = GetLatLon(flight.ArrivalAirport);
+                return (origin, destination);
+            })
+            .Where(pair => pair.origin is not null && pair.destination is not null)
+            .Select(pair => (pair.origin[1], pair.origin[0], pair.destination[1], pair.destination[0]))
+            .ToList();
+
+        SearchStatus = string.IsNullOrWhiteSpace(query)
+            ? $"Showing {selectedFlights.Count} flights from {SelectedAirport.IataCode}."
+            : $"Found {selectedFlights.Count} matching flights for '{query}'.";
 
         FlightPathsUpdated?.Invoke();
     }

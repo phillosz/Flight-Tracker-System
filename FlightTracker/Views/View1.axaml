@@ -21,12 +21,25 @@
 					</DataTemplate>
 				</ComboBox.ItemTemplate>
 			</ComboBox>
-			<Button Content="Clear Selection"
-					Command="{Binding ClearSelectionCommand}" />
+			<Button Content="Clear"
+					Command="{Binding ClearAllCommand}" />
+		</StackPanel>
+
+		<StackPanel DockPanel.Dock="Top"
+					Orientation="Horizontal"
+					Spacing="8"
+					Margin="12,0,12,8">
+			<TextBlock Text="Flight Search:" VerticalAlignment="Center" />
+			<TextBox Width="320"
+					 Text="{Binding FlightSearchQuery, Mode=TwoWay}"
+					 Watermark="Flight number or airline name" />
+			<Button Content="Search"
+					Command="{Binding SearchFlightCommand}" />
 		</StackPanel>
 
 		<StackPanel DockPanel.Dock="Top" Margin="12,0,12,12">
 			<TextBlock Text="{Binding PreferenceStatus}" Foreground="#666666" />
+			<TextBlock Text="{Binding SearchStatus}" Foreground="#666666" />
 		</StackPanel>
 
 		<Grid Margin="12">
