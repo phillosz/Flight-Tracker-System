@@ -50,6 +50,8 @@ public partial class View1 : UserControl
 			vm.FlightPathsUpdated += UpdateRoutesLayer;
 		}
 
+		UpdateRoutesLayer();
+
 		var center = SphericalMercator.FromLonLat(10.0, 55.0);
 		mapControl.Map.Navigator.CenterOn(center.x, center.y, 0, null!);
 		mapControl.Map.Navigator.ZoomToLevel(4);

@@ -1,7 +1,10 @@
 using FlightTracker.Interfaces;
 using FlightTracker.Models;
+using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.Input;
 
 namespace FlightTracker.ViewModels;
 
@@ -30,6 +33,13 @@ public partial class View3ViewModel : ViewModelBase
     {
         get => _loadStatus;
         set => SetProperty(ref _loadStatus, value);
+    }
+
+    private string _exportStatus = "No export generated";
+    public string ExportStatus
+    {
+        get => _exportStatus;
+        set => SetProperty(ref _exportStatus, value);
     }
 
     private int _topRoutesCount;
@@ -93,6 +103,23 @@ public partial class View3ViewModel : ViewModelBase
         catch (System.Exception ex)
         {
             LoadStatus = $"Analytics failed: {ex.Message}";
+        }
+    }
+
+    [RelayCommand]
+    private async Task ExportAnalyticsTextAsync()
+    {
+        try
+        {
+            var exportDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Exports");
+            var filePath = Path.Combine(exportDirectory, $"analytics-{DateTime.Now:yyyyMMdd-HHmmss}.txt");
+
+            await _exportDataService.ExportAnalyticsToTextAsync(Analytics, filePath);
+            ExportStatus = $"Export created: {filePath}";
+        }
+        catch (Exception ex)
+        {
+            ExportStatus = $"Export failed: {ex.Message}";
         }
     }
 

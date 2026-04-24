@@ -12,19 +12,21 @@ public partial class MainWindowViewModel : ViewModelBase
     private readonly ILoadDataService _loadDataService;
     private readonly IAnalyticsService _analyticsService;
     private readonly IExportDataService _exportDataService;
+    private readonly IUserPreferencesService _userPreferencesService;
 
     private readonly View1ViewModel _view1ViewModel;
     private readonly View2ViewModel _view2ViewModel;
     private readonly View3ViewModel _view3ViewModel;
 
-    public MainWindowViewModel(ILoadDataService loadDataService, IAnalyticsService analyticsService, IExportDataService exportDataService)
+    public MainWindowViewModel(ILoadDataService loadDataService, IAnalyticsService analyticsService, IExportDataService exportDataService, IUserPreferencesService userPreferencesService)
     {
         _loadDataService = loadDataService;
         _analyticsService = analyticsService;
         _exportDataService = exportDataService;
+        _userPreferencesService = userPreferencesService;
 
-        _view1ViewModel = new View1ViewModel(_loadDataService, _analyticsService, _exportDataService);
-        _view2ViewModel = new View2ViewModel(_loadDataService, _analyticsService, _exportDataService);
+        _view1ViewModel = new View1ViewModel(_loadDataService, _analyticsService, _exportDataService, _userPreferencesService);
+        _view2ViewModel = new View2ViewModel(_loadDataService, _analyticsService, _exportDataService, _userPreferencesService);
         _view3ViewModel = new View3ViewModel(_loadDataService, _analyticsService, _exportDataService);
 
         ShowView1Command = new RelayCommand(() => CurrentViewModel = _view1ViewModel);
